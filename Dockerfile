@@ -69,7 +69,6 @@ RUN adduser user sudo
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER user
 
-
 VOLUME /SEFHI
 WORKDIR /SEFHI
 EXPOSE 8888
