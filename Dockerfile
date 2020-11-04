@@ -60,15 +60,6 @@ RUN pip3 install webrtcvad
 RUN export CUDACXX=/usr/local/cuda/bin/nvcc
 RUN pip3 install https://github.com/DavidDiazGuerra/gpuRIR/zipball/master
 
-ARG USER_ID
-ARG GROUP_ID
-
-RUN addgroup --gid $GROUP_ID user
-RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID user
-RUN adduser user sudo
-RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-USER user
-
 VOLUME /SEFHI
 WORKDIR /SEFHI
 EXPOSE 8888
