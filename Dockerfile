@@ -72,4 +72,5 @@ USER user
 VOLUME /SEFHI
 WORKDIR /SEFHI
 EXPOSE 8888
+
 CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/SEFHI --ip 0.0.0.0 --no-browser --allow-root"]
